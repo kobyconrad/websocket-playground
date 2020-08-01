@@ -2,7 +2,8 @@ const net = require("net");
 
 const client = net.createConnection({ port: 9898 }, () => {
   console.log("CLIENT: I connected to the server.");
-  client.write("CLIENT: Hello this is client!");
+  client.write("CLIENT: Hello this is client! Am I data?");
+  client.write("am i data?");
 });
 
 client.on("data", (data) => {
